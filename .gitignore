@@ -1,0 +1,10 @@
+private/
+materials/catalog.json
+materials/guides/*.html
+materials/guides/*.pdf
+materials/starter_code/**/*.zip
+materials/starter_code_extracted/**
+!materials/starter_code_extracted/.gitkeep
+__pycache__/
+*.pyc
+
