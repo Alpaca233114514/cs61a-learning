@@ -11,6 +11,27 @@ This repository initializes a local CS61A study workspace around the public cour
 
 ## Quick start
 
+### Pytea · 本地 Python 导师
+
+在终端输入 `pytea`，自动打开本地浏览器界面。支持简体中文 / English、逐步回放、调用帧、对象引用箭头、输出和 `input()`。
+
+首次安装命令（只创建本地启动脚本，无第三方依赖）：
+
+```bash
+python scripts/install_pytea.py
+pytea
+```
+
+也可以不安装，直接在仓库根目录运行：
+
+```bash
+python -m pytea
+```
+
+使用方法与限制见 [Pytea 使用指南](docs/pytea.zh-CN.md)。
+
+### 同步课程资料
+
 ```bash
 python scripts/sync_cs61a.py
 ```
