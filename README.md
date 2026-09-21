@@ -32,6 +32,22 @@ python -m pytea
 
 ### 同步课程资料
 
+在任意终端目录输入：
+
+```powershell
+cs update
+```
+
+命令检查 **2026 秋季**官网新发布的 Lab、HW、Reading，更新 PDF 和目录，并下载起始代码。已有练习代码保持原样，官网不同版本另存 `private/upstream/`；答案始终放在忽略目录 `private/answers/`。旧 PDF、缓存和索引自动备份至 `private/update-backups/`。失败项目会显示错误并记录在索引，命令返回非零退出码，重新运行即可重试。它不会提交或推送 Git，也不会自动切换学期。
+
+本机已安装 `cs` 启动器，使用已有的 Codex Python 运行环境，无新增依赖。换电脑时可运行 `python scripts/install_cs.py --python "具备 lxml、reportlab、pypdf 的 python.exe 完整路径"` 安装；安装位置须已在 PATH 中。更新实现见 `scripts/cs.py`。
+
+已下载的官方课程资料见 [2026 秋季目录](materials/fa26/README.md)：Lab、HW 的题目 PDF 与解压代码，以及课表 Reading 的 PDF。答案和本地下载缓存位于 Git 忽略的 `private/`。来源、时间及 SHA-256 见 `materials/fa26/manifest.json`。
+
+本次下载脚本为 `scripts/download_course.py`（需要 `lxml`、`reportlab`、`pypdf` 和 Windows Arial/Consolas 字体）；它只收集官网已发布的链接，保留已有文件，遇到不同内容拒绝覆盖。PDF 是官方网页的静态阅读版，交互演示仍需访问原页面。
+
+下面是旧版同步器，会生成忽略目录下的 ZIP/网页镜像，并可能重建旧解压目录；不用于更新上述按学期整理的练习代码。
+
 ```bash
 python scripts/sync_cs61a.py
 ```

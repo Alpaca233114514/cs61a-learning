@@ -8,3 +8,12 @@ materials/starter_code_extracted/**
 __pycache__/
 *.pyc
 
+# Official course answers stay local; starter source and question PDFs are tracked.
+**/answers/
+**/solutions/
+**/*_sol.py
+**/*_sol.scm
+**/*_sol.sql
+materials/fa26/**/code/.env
+materials/fa26/**/code/.grader/
+
