@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pytea · Python 导师</title><link rel="stylesheet" href="/style.css"><script defer src="/app.js"></script></head>
+<body>
+<header><a class="brand" href="/">pytea<span>一行一行，理解 Python。</span></a><div class="header-right"><span class="local" data-i18n="local">本地运行 · 无需联网</span><select id="language" aria-label="Language"><option value="zh">简体中文</option><option value="en">English</option></select></div></header>
+<main>
+<div class="intro"><div><div class="eyebrow">PYTHON ENVIRONMENT VISUALIZER</div><h1 data-i18n="title">让代码的每一步，都看得见。</h1><p data-i18n="subtitle">观察变量如何绑定，函数如何调用，对象如何共享。</p></div><span class="badge">Python 3</span></div>
+<div class="workspace">
+<section class="code-panel"><div class="panel-heading"><h2><span class="section-number">01</span> <span data-i18n="code">代码</span></h2><select id="example" aria-label="示例 / Examples"></select></div>
+<div class="editor-wrap"><textarea id="editor" spellcheck="false" aria-label="Python code"></textarea><pre id="code-view" hidden></pre></div>
+<div class="editor-actions"><button id="run" class="primary" data-i18n="run">▶ 可视化执行</button><button id="edit" hidden data-i18n="edit">编辑代码</button><span data-i18n="shortcut">Ctrl / ⌘ + Enter 运行</span></div>
+<details><summary data-i18n="input">输入数据 · input()</summary><textarea id="inputs" rows="3" aria-label="input()" placeholder="每次 input() 对应一行"></textarea></details>
+<div class="playback"><div class="step-heading"><span id="step-label" aria-live="polite"></span><span id="event-label"></span></div><input id="progress" type="range" min="0" max="0" value="0" aria-label="执行进度 / Execution progress" disabled><div class="controls"><button id="first" data-i18n="first" disabled>⏮ 首步</button><button id="back" data-i18n="back" disabled>← 上一步</button><button id="play" data-i18n="play" disabled>▷ 播放</button><button id="next" data-i18n="next" disabled>下一步 →</button><button id="last" data-i18n="last" disabled>末步 ⏭</button></div><div class="legend"><span data-i18n="previous">🟢 刚执行的位置</span><span data-i18n="upcoming">🔴 即将执行的位置</span></div></div>
+<div class="output-block"><h3 data-i18n="output">程序输出</h3><pre id="output" aria-live="polite"></pre></div></section>
+<section class="diagram-panel"><div class="panel-heading"><h2><span class="section-number">02</span> <span data-i18n="environment">环境图</span></h2><span class="live-dot" data-i18n="snapshot">执行快照</span></div><div id="hint" class="hint" aria-live="polite"></div><div id="diagram"><svg id="arrows" aria-hidden="true"></svg><div class="diagram-column"><h3 data-i18n="frames">调用帧</h3><div id="frames"></div></div><div class="diagram-column"><h3 data-i18n="objects">对象</h3><div id="objects"></div></div></div><div id="error" role="alert" hidden></div></section>
+</div>
+<footer><span data-i18n="footer">为理解而运行。为探索而暂停。</span><span data-i18n="trust">仅运行可信代码 · 本地执行并非安全沙箱 · 最多 600 步 / 5 秒</span></footer>
+</main></body></html>
